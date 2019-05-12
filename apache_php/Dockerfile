@@ -3,7 +3,7 @@ FROM ubuntu
 MAINTAINER Slawek
 
 RUN apt-get update && \ 
-	apt-get install -y apache2 vim nano php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-cli && \
+	apt-get install -y apache2 vim nano php7.0 php7.0-fpm php7.0-mysql php7.0-cli && \
 	apt-get clean && \ 
 	rm -rf /var/lib/apt/lists/*
 
