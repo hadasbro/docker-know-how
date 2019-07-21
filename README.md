@@ -1,4 +1,4 @@
-#1. General info
+# 1. General info
 
 Docker Documentation: https://docs.docker.com/
 
@@ -89,7 +89,7 @@ This is just Docker basics tutorial. This wiki includes some basic commands how 
 
 * * * 
 
-#2. Required programs
+# 2. Required programs
 
 a) Docker Desktop for Windows (or older Docker Toolbox) https://docs.docker.com/docker-for-windows/
 
@@ -102,9 +102,9 @@ d) Oracle Virtual Box https://www.virtualbox.org/
 
 * * * 
 
-#3. Installation
+# 3. Installation
 
-###3.1 Windows 
+### 3.1 Windows 
 
 a) Install Virtual Box and any SSH client 
 
@@ -179,7 +179,7 @@ _Machine -> Settings -> System_
 
 > ![virtual_machine_settings.png](https://bitbucket.org/repo/qzxqzMr/images/1883400916-virtual_machine_settings.png)
 
-###3.2 Installation on Linux (Ubuntu example)
+### 3.2 Installation on Linux (Ubuntu example)
 
 a) Installation from repository
 
@@ -236,9 +236,9 @@ _@See more:_ https://docs.docker.com/install/linux/docker-ce/centos/ (section _I
 
 
 
-#4. About Docker flow:
+# 4. About Docker flow:
 
-###4.1 General flow
+### 4.1 General flow
 
 * _@See_ https://nordicapis.com/api-driven-devops-spotlight-on-docker/
 
@@ -250,7 +250,7 @@ _@See more:_ https://docs.docker.com/install/linux/docker-ce/centos/ (section _I
 
 
 
-###4.2 Container 
+### 4.2 Container 
 
 * container is kind of separate machine which is completely independent on master system and also  independent   on other containers.
 
@@ -267,7 +267,7 @@ _Docker is not a Virtual Machine. It doesn't virtualise resources but uses some 
 
 _@See more:_ https://www.docker.com/sites/default/files/d8/2018-11/docker-containerized-and-vm-transparent-bg.png
 
-###4.3 Image
+### 4.3 Image
 
 * image is kind of "pattern" for building containers
 
@@ -275,16 +275,16 @@ _@See more:_ https://www.docker.com/sites/default/files/d8/2018-11/docker-contai
 
 * image can be also a recorded result of any container, the same as we create Containers from Images, we can also create image from Container
 
-###4.4 Containers example:
+### 4.4 Containers example:
 _@See_ https://cdn-images-1.medium.com/max/1600/1*Ef2uxCnIkF0PqLGxYqV2gA.png
 
 
 * * * 
 
 
-#5. Commands
+# 5. Commands
 
-###5.1 Basic commands
+### 5.1 Basic commands
 
 ```
 # to run any command in container use below syntax
@@ -350,7 +350,7 @@ Docker cheat sheet:
 * _@See:_ https://caylent.com/docker-commands-cheat-sheet/
 
 
-###5.2 Examples
+### 5.2 Examples
 
 ```
 # create docker container based on nginx image(the latest version), in detached mode (int the background), expose port 80 (map to the same port in host), run nginx server
@@ -377,7 +377,7 @@ then Docker will pull needed image and save to your local repository.
 * * * 
 
 
-#6. Images and containers
+# 6. Images and containers
 ### 6.1 Images
 
 ```
@@ -580,7 +580,7 @@ $ ls -la
 > ![docker_changes_see1.png](https://bitbucket.org/repo/qzxqzMr/images/2926949570-docker_changes_see1.png)
 
 
-###6.7 Stopping and removing containers and images
+### 6.7 Stopping and removing containers and images
 
 a) Containers
 
@@ -622,7 +622,7 @@ $ docker rmi $(docker images -q)
 > ![removeing_containers_and_imgs.png](https://bitbucket.org/repo/qzxqzMr/images/1154668575-removeing_containers_and_imgs.png)
 
 
-###6.8 Image - Container relation
+### 6.8 Image - Container relation
 
 
 Container is always based on image (we need to declare image we want to base, to create any container based on that). 
@@ -695,7 +695,7 @@ $ ls -la
 
 > ![docker_commit_saved.png](https://bitbucket.org/repo/qzxqzMr/images/3572405415-docker_commit_saved.png)
 
-###6.9 General conslusions
+### 6.9 General conslusions
 
 ```$ docker run``` ... - creates container based on image
 
@@ -707,7 +707,7 @@ $ ls -la
 
 
 
-#7. Working with containers
+# 7. Working with containers
 
 ###Processes in the container
 
@@ -746,12 +746,12 @@ Command ```docker logs``` works on every container, no matter what is the contai
 * * * 
 
 
-#8. Files and data volumes
+# 8. Files and data volumes
 
 Data volumes functionality in kind of mapping between local host and container. We can use this to share some HDD space or directory between container and host system.
 
 
-###8.1 "Persistent" data (shared from host or other container).
+### 8.1 "Persistent" data (shared from host or other container).
 
 How to share volume - map host directory to docker container's one?
 
@@ -769,7 +769,7 @@ will be stored just on host machine. Also mounted data is not committed to an im
 
 > ![mount_v.png](https://bitbucket.org/repo/qzxqzMr/images/1709790906-mount_v.png)
 
-###8.2 Ephemeral data 
+### 8.2 Ephemeral data 
 
 Ephemeral data is available only inside the container and is removed once we remove container.
 
@@ -806,7 +806,7 @@ so we lost data from container 1
 > ![volumesx.png](https://bitbucket.org/repo/qzxqzMr/images/2018847913-volumesx.png)
 > ![docker_mountx2.png](https://bitbucket.org/repo/qzxqzMr/images/3040643431-docker_mountx2.png)
 
-###8.3 Server Http with persistent data
+### 8.3 Server Http with persistent data
 
 Server Http with persistent data volume (from host).
 
@@ -833,7 +833,7 @@ and we should see our index.html file's contend so our server in on docker conta
 > ![mount_httpd.png](https://bitbucket.org/repo/qzxqzMr/images/3401764761-mount_httpd.png)
 
 
-###8.4 Inspect mounts
+### 8.4 Inspect mounts
 
 ```
 # use docker inspect command to check mounts
@@ -842,7 +842,7 @@ $ docker inspect container
 
 > ![docker_mounts.png](https://bitbucket.org/repo/qzxqzMr/images/1488836082-docker_mounts.png)
 
-###8.5 Copying files between container and host
+### 8.5 Copying files between container and host
 
 **From host to container**
 
@@ -873,7 +873,7 @@ $ docker cp my_server:/my_files C:/
 
 > ![docker_cp2.png](https://bitbucket.org/repo/qzxqzMr/images/1321903812-docker_cp2.png)
 
-###8.6 Command "docker volume"
+### 8.6 Command "docker volume"
 
 
 Creating volumes and managing columens.
@@ -997,7 +997,7 @@ $ docker push slawekhaa/my_own_ubuntu:1.01
 Dockerfile is kind of script or image's description (set of commands) we can use to build an image.
 The order of commands in Dockerfile is important.
 
-####10.1 Example of simple Dockerfile:
+#### 10.1 Example of simple Dockerfile:
 
 ```
 # Comment (e.g. "server with php")
@@ -1045,7 +1045,7 @@ CMD apachectl -D FOREGROUND
 
 
 
-####10.2 Build an image based on Dockerfile
+#### 10.2 Build an image based on Dockerfile
 
 ```
 # Syntax
@@ -1078,7 +1078,7 @@ https://miro.medium.com/max/1273/1*p8k1b2DZTQEW_yf0hYniXw.png
 
 
 
-#11. Docker compose
+# 11. Docker compose
 
 
 Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration. To learn more about all the features of Compose, see the list of features.
