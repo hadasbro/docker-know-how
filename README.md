@@ -1,4 +1,4 @@
-![picture](https://img.shields.io/badge/-docker-blue.svg)
+![picture](https://img.shields.io/badge/-Docker-blue)
 
 
 # 1. General info
