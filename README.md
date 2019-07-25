@@ -1,3 +1,6 @@
+![picture](https://img.shields.io/badge/-docker-blue.svg)
+
+
 # 1. General info
 
 Docker Documentation: https://docs.docker.com/
