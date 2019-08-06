@@ -1,4 +1,4 @@
-![picture](https://img.shields.io/badge/-Docker-blue)
+![picture](https://img.shields.io/badge/docker-cheat--sheet-blue)
 
 
 # 1. General info
