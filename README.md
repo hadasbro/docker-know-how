@@ -1207,3 +1207,7 @@ $ docker run -tid serverssh -p 2022:22
 * * * * *
 
 The end.
+
+## Authors
+
+* **Slawomir Hadas** - *author* - [Github](https://github.com/hadasbro)
