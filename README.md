@@ -492,6 +492,15 @@ $ docker ps -l
 $ docker inspect [ image ]
 
 $ docker inspect 663c1274dff6 
+
+# log-in and log-out
+$ docker logout [SERVER]
+$ docker login [OPTIONS] [SERVER]
+[OPTIONS]
+--password , -p		Password
+--password-stdin	Take the password from stdin
+--username , -u		Username
+
 ```
 
 > ![docker_inspect.png](https://bitbucket.org/repo/qzxqzMr/images/241417730-docker_inspect.png)
